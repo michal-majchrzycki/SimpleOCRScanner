@@ -2,12 +2,7 @@ import UIKit
 import VisionKit
 import Vision
 
-protocol ScannerViewProtocol: AnyObject {
-    
-}
-
 class ScannerViewController: UIViewController {
-    var presenter: ScannerPresenterProtocol?
     var scannerView: ScannerView?
     
     private var ocrRecognizeRequest = VNRecognizeTextRequest(completionHandler: nil)
@@ -19,13 +14,9 @@ class ScannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scannerView?.delegate = self
+        configureOCR()
     }
 
-}
-
-//MARK: - Presenter implementation
-extension ScannerViewController: ScannerViewProtocol {
-    
 }
 
 //MARK: - View implementation
@@ -47,6 +38,7 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
         
         let image = scan.imageOfPage(at: 0)
         scannerView?.updateImage(image)
+        processImage(scan.imageOfPage(at: 0))
         controller.dismiss(animated: true)
     }
     
@@ -70,7 +62,7 @@ extension ScannerViewController {
                 
                 text += topCandidate.string + "\n"
             }
-            
+            print("texttexttexttexttext", text)
             DispatchQueue.main.async {
                 self.scannerView?.updateTextView(text)
             }

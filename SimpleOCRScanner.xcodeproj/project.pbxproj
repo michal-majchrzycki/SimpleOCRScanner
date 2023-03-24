@@ -14,7 +14,6 @@
 		374C358B29CDD93300EF3188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374C358A29CDD93300EF3188 /* Assets.xcassets */; };
 		374C358E29CDD93300EF3188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374C358C29CDD93300EF3188 /* LaunchScreen.storyboard */; };
 		374C359829CDD9BE00EF3188 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374C359729CDD9BE00EF3188 /* ScannerViewController.swift */; };
-		374C359A29CDD9C800EF3188 /* ScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374C359929CDD9C800EF3188 /* ScannerPresenter.swift */; };
 		374C359D29CDDB2400EF3188 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374C359C29CDDB2400EF3188 /* ScannerView.swift */; };
 		374C359F29CDDE1800EF3188 /* ScannerConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374C359E29CDDE1800EF3188 /* ScannerConstructor.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		374C358D29CDD93300EF3188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		374C358F29CDD93300EF3188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		374C359729CDD9BE00EF3188 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
-		374C359929CDD9C800EF3188 /* ScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPresenter.swift; sourceTree = "<group>"; };
 		374C359C29CDDB2400EF3188 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		374C359E29CDDE1800EF3188 /* ScannerConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerConstructor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +62,7 @@
 		374C358029CDD93200EF3188 /* SimpleOCRScanner */ = {
 			isa = PBXGroup;
 			children = (
-				374C359629CDD9AA00EF3188 /* Modules */,
+				374C359529CDD99F00EF3188 /* Scanner */,
 				374C358129CDD93200EF3188 /* AppDelegate.swift */,
 				374C358329CDD93200EF3188 /* SceneDelegate.swift */,
 				374C358529CDD93200EF3188 /* ViewController.swift */,
@@ -81,18 +79,9 @@
 			children = (
 				374C359729CDD9BE00EF3188 /* ScannerViewController.swift */,
 				374C359C29CDDB2400EF3188 /* ScannerView.swift */,
-				374C359929CDD9C800EF3188 /* ScannerPresenter.swift */,
 				374C359E29CDDE1800EF3188 /* ScannerConstructor.swift */,
 			);
 			path = Scanner;
-			sourceTree = "<group>";
-		};
-		374C359629CDD9AA00EF3188 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				374C359529CDD99F00EF3188 /* Scanner */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +155,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374C359A29CDD9C800EF3188 /* ScannerPresenter.swift in Sources */,
 				374C358629CDD93200EF3188 /* ViewController.swift in Sources */,
 				374C358229CDD93200EF3188 /* AppDelegate.swift in Sources */,
 				374C359D29CDDB2400EF3188 /* ScannerView.swift in Sources */,
